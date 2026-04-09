@@ -1,8 +1,5 @@
-# 🤖 A1: Truncated Vision-Language-Action Model
+# 🤖 A1: A Fully Transparent Open-Source, Adaptive and Efficient Truncated Vision-Language-Action Model
 
-<p align="center">
-  <b>A</b> Fully <b>T</b>ransparent <b>O</b>pen-Source, <b>A</b>daptive and <b>E</b>fficient Vision-Language-Action Model
-</p>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2604.05672">
