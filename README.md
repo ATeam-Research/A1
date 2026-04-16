@@ -301,6 +301,7 @@ bash train_rc.sh
 | **pretrain** | Pretrained model on large-scale VLA datasets | [Link](https://huggingface.co/spatialtemporal-ai/a1-pretrain) |
 | **libero** | Fine-tuned on LIBERO simulation tasks | [Link](https://huggingface.co/spatialtemporal-ai/a1-libero) |
 | **libero_exit** | LIBERO model with early exit mechanism | [Link](https://huggingface.co/spatialtemporal-ai/a1-libero-exit) |
+| **vlabench** | Fine-tuned on VLABench simulation tasks | [Link](https://huggingface.co/spatialtemporal-ai/a1-vlabench) |
 | **rc_put_cup_on_coaster** | Fine-tuned on RoboChallenge put cup task | [Link](https://huggingface.co/spatialtemporal-ai/a1-rc-put-cup-on-coaster) |
 | **rc_open_the_drawer** | Fine-tuned on RoboChallenge open drawer task | [Link](https://huggingface.co/spatialtemporal-ai/a1-rc-open-the-drawer) |
 
@@ -314,7 +315,7 @@ bash train_rc.sh
 | **RoboMIND** | RoboMIND benchmark dataset | [Link](https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND) |
 | **AgiBot** | AgiBot dataset | [Link](https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta) |
 | **LIBERO** | LIBERO simulation tasks | [Link](https://huggingface.co/datasets/spatialtemporal-ai/libero_rlds) |
-| **VlaBench** | VLABench simulation environment | [Link]() |
+| **VlaBench** | VLABench simulation environment | [Link](https://huggingface.co/datasets/spatialtemporal-ai/vlabench) |
 
 **📁 Storage Paths:**
 - **Model weights**: Place downloaded model weights in the `model/` directory

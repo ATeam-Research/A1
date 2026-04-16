@@ -59,7 +59,7 @@ class GenerateConfig:
     #################################################################################################################
     # VLABench environment-specific parameters
     #################################################################################################################
-    tasks: str="select_toy select_fruit select_painting select_poker select_mahjong"
+    tasks: str="select_toy select_fruit select_painting select_mahjong"
     eval_track: str = None
     num_steps_wait: int = 10  # Number of steps to wait for objects to stabilize i n sim
     n_episode: int = 50  # Number of rollouts per task
@@ -97,7 +97,7 @@ class GenerateConfig:
     use_proprio: bool = True                         # Whether to include proprio state in input
 
     center_crop: bool = True                         # Center crop? (if trained w/ random crop image aug)
-    num_open_loop_steps: int = 5                     # Number of actions to execute open-loop before requerying policy
+    num_open_loop_steps: int = 8                     # Number of actions to execute open-loop before requerying policy
 
     unnorm_key: Union[str, Path] = ""                # Action un-normalization key
 
@@ -169,6 +169,9 @@ class A1(Policy):
             self.action_plan.extend(actions[:self.replan_steps])
         action = self.action_plan.popleft()
         target_pos, target_euler, gripper = action[:3], action[3:6], action[6]
+        if obs['ee_state'][6] >= 0.5 and gripper < 0.5:
+            target_pos[2] -=0.01
+
         if gripper >= 0.5:
             gripper_state = np.ones(2)*0.04
         else:
@@ -207,7 +210,7 @@ def main(cfg: GenerateConfig) -> None:
         tasks=tasks,
         n_episodes=cfg.n_episode,
         episode_config=episode_configs,
-        max_substeps=3,   
+        max_substeps=5,   
         save_dir=cfg.save_dir,
         visulization=cfg.visulization,
         metrics=metrics,
