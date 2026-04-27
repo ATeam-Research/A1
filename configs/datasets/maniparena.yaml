@@ -1,0 +1,100 @@
+# Dataset configuration for VLAbench
+
+# Image augmentation configuration (optional, defaults will be used if not configured)
+image_augmentation:
+  enable: true              # Whether to enable image augmentation
+  enable_random_erasing: false   # Whether to enable random erasing
+  enable_sharpening: true       # Whether to enable sharpening
+  augmentation_prob: 0.5        # Probability of applying augmentation
+
+maniparena:
+  - path: data/maniparena/execution_reasoning/arrange_cup_inverted_triangle
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/insert_wireline
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/pick_items_into_basket
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/pour_water_from_bottle
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/put_blocks_to_color
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/put_glasses_on_woodshelf
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/put_items_into_drawer
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/put_ring_onto_rod
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/put_spoon_to_bowl
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/execution_reasoning/put_stationery_in_case
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/semantic_reasoning/classify_items_as_shape
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/semantic_reasoning/pair_up_items
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/semantic_reasoning/pick_fruits_into_basket
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/semantic_reasoning/press_button_in_order
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]
+  - path: data/maniparena/semantic_reasoning/sort_headphone
+    weight: 1.0
+    normalization_type: bounds_q99
+    norm_stats_path: assets/maniparena.json
+    delta: true
+    delta_mask: [6, -1, 6, -1]

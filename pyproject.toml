@@ -67,7 +67,32 @@ serve = [
     "fastapi",
 ]
 all = [
-    "ai2-molmo[dev,train,serve]",
+    # Convenience meta-extra: combine local optional groups.
+    "ruff",
+    "mypy>=1.0,<1.4",
+    "black>=23.1,<24.0",
+    "isort>=5.12,<5.13",
+    "pytest",
+    "pytest-sphinx",
+    "twine>=1.11.0",
+    "setuptools",
+    "wheel",
+    "build",
+    "wandb",
+    "beaker-gantry",
+    "click",
+    "torchmetrics",
+    "smashed[remote]>=0.21.1",
+    "safetensors",
+    "scikit-learn",
+    "msgspec>=0.14.0",
+    "openai",
+    "python-Levenshtein",
+    "editdistance",
+    "pydantic",
+    "uvicorn",
+    "gradio",
+    "fastapi",
 ]
 
 [project.urls]
